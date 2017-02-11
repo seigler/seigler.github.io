@@ -1,0 +1,6 @@
+languageCode = "en-us"
+title = "My New Hugo Site"
+baseurl = "http://example.org/"
+source = "src/"
+publishDir = "../dest"
+theme = "eos"

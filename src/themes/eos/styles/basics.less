@@ -6,16 +6,31 @@
   transform-style: preserve-3d;
   font-family: inherit;
 }
+
+//@color-text: #DA0;
+@color-text: #DDD;
+
 html {
   box-sizing: border-box;
   height: 100%;
   overflow: hidden;
-  color: #DA0;
+  color: @color-text;
+  text-shadow: 0 0 0.1em fade(@color-text, 50%);
 }
 a {
   color: inherit;
   &:hover {
-    background-color: #DA0;
+    background-color: @color-text;
     color: #20282a;
   }
+}
+::selection {
+  background-color: @color-text;
+  color: #20282a;
+}
+h1, h2, h3, h4 {
+  font-size: inherit;
+  font-weight: bold;
+  border-bottom: 0.1em dotted;
+  margin-top: 1em;
 }

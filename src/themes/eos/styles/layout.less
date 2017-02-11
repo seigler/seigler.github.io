@@ -40,9 +40,24 @@ body {
   .wrapper {
     transform: rotateZ(1.3deg) rotateX(-8.8deg) rotateY(-9.3deg) translate3d(-14.9vh, 5.3vh, -27.4vh);
     transform-origin: top right;
-    color: #DA0;
     padding: 1vh;
     width: 100vh;
     height: 75vh;
   }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: stretch;
+}
+
+main {
+  margin: 1em 0;
+  flex-grow: 1;
+}
+
+footer {
+  padding-top: 1em;
 }

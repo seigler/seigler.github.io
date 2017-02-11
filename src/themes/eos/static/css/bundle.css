@@ -12,14 +12,32 @@ html {
   box-sizing: border-box;
   height: 100%;
   overflow: hidden;
-  color: #DA0;
+  color: #DDD;
+  text-shadow: 0 0 0.1em rgba(221, 221, 221, 0.5);
 }
 a {
   color: inherit;
 }
 a:hover {
-  background-color: #DA0;
+  background-color: #DDD;
   color: #20282a;
+}
+::-moz-selection {
+  background-color: #DDD;
+  color: #20282a;
+}
+::selection {
+  background-color: #DDD;
+  color: #20282a;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-size: inherit;
+  font-weight: bold;
+  border-bottom: 0.1em dotted;
+  margin-top: 1em;
 }
 /*layout*/
 html {
@@ -62,11 +80,28 @@ body {
   .wrapper {
     transform: rotateZ(1.3deg) rotateX(-8.8deg) rotateY(-9.3deg) translate3d(-14.9vh, 5.3vh, -27.4vh);
     transform-origin: top right;
-    color: #DA0;
     padding: 1vh;
     width: 100vh;
     height: 75vh;
   }
+}
+.wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+main {
+  margin: 1em 0;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+footer {
+  padding-top: 1em;
 }
 
 /*# sourceMappingURL=bundle.css.map */

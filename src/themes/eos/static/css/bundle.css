@@ -12,22 +12,22 @@ html {
   box-sizing: border-box;
   height: 100%;
   overflow: hidden;
-  color: #DDD;
-  text-shadow: 0 0 0.1em rgba(221, 221, 221, 0.5);
+  color: white;
+  text-shadow: 0 0 0.1em rgba(255, 255, 255, 0.5);
 }
 a {
   color: inherit;
 }
 a:hover {
-  background-color: #DDD;
+  background-color: white;
   color: #20282a;
 }
 ::-moz-selection {
-  background-color: #DDD;
+  background-color: white;
   color: #20282a;
 }
 ::selection {
-  background-color: #DDD;
+  background-color: white;
   color: #20282a;
 }
 h1,
@@ -56,13 +56,18 @@ body {
 }
 .wrapper {
   position: relative;
-  transform: rotateZ(1.3deg) rotateX(-8.8deg) rotateY(-9.3deg) translate3d(-14.9vw, 5.3vw, -27.4vw);
+  transform: rotateZ(1.3deg) rotateX(-8.8deg) rotateY(-9.3deg) scale(0.3) translate3d(-56.2vw, 86.1vw, 46.3vw);
   transform-origin: top right;
   padding: 1vw;
   height: 75vw;
   width: 100vw;
   margin: 0 0 0 auto;
   overflow: auto;
+  perspective: none;
+}
+.wrapper > * {
+  opacity: 0.8;
+  transform: translateZ(-50vmin);
 }
 @media (min-width: 100vh) {
   html {
@@ -78,7 +83,7 @@ body {
     perspective-origin: calc(100vw - 31vh) 45vh;
   }
   .wrapper {
-    transform: rotateZ(1.3deg) rotateX(-8.8deg) rotateY(-9.3deg) translate3d(-14.9vh, 5.3vh, -27.4vh);
+    transform: rotateZ(1.3deg) rotateX(-8.8deg) rotateY(-9.3deg) scale(0.3) translate3d(-56.2vh, 86.1vh, 46.3vh);
     transform-origin: top right;
     padding: 1vh;
     width: 100vh;

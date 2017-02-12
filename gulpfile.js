@@ -1,4 +1,6 @@
-/*jslint node: true */
+/*jslint
+node: true
+regexp: true*/
 'use strict';
 
 /**
@@ -22,6 +24,7 @@ var gulp = require('gulp'),
   svgstore = require('gulp-svgstore'), // combines SVGs into a sprite sheet
   svgmin = require('gulp-svgmin'), // minifies SVGs to save filesize
   notify = require('gulp-notify'), // pops up OS notifications
+  revAll = require('gulp-rev-all'), // hashes static resources, updates references to them
   path = require('path'),
   spawn = require('child_process').spawn,
 // Define source and destination paths
@@ -113,7 +116,7 @@ gulp.task('build:icons', function () {
 });
 
 gulp.task('clean:site', function () {
-  return gulp.src('./build', {read: false})
+  return gulp.src(['./build', './cdn'], {read: false})
     .pipe(clean());
 });
 
@@ -139,6 +142,13 @@ gulp.task('build:site', ['clean:site', 'build:less', 'build:icons'], function ()
 
   child.on('close', function (code) {
     gutil.log("Done with exit code", code);
+    gulp.src('./dist/**')
+      .pipe(revAll.revision({ dontRenameFile: [
+        /^\/favicon\.ico$/g,
+        /.*\.html$/g,
+        /.*\.xml$/g
+      ] }))
+      .pipe(gulp.dest('./cdn'));
   });
 });
 

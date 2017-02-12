@@ -16,6 +16,7 @@ html {
   overflow: hidden;
   color: @color-text;
   text-shadow: 0 0 0.1em fade(@color-text, 50%);
+  line-height: 1.2;
 }
 a {
   color: inherit;
@@ -32,15 +33,26 @@ h1, h2, h3, h4 {
   font-size: inherit;
   font-weight: bold;
   border-bottom: 0.1em dotted;
+  margin-bottom: -0.1em;
   margin-top: 1em;
 }
+h1 {
+  text-align: center;
+}
+h3 {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
 header {
   background-color: @color-text;
   color: #20282a;
   nav a {
     text-decoration: none;
-    &:hover {
-      text-decoration: underline;
+    &:hover, &:focus {
+      color: @color-text;
+      background-color: #20282a;
+      outline: none;
     }
     &:before {
       content: '[';

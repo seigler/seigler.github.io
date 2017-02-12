@@ -14,6 +14,7 @@ html {
   overflow: hidden;
   color: white;
   text-shadow: 0 0 0.1em rgba(255, 255, 255, 0.5);
+  line-height: 1.2;
 }
 a {
   color: inherit;
@@ -37,7 +38,15 @@ h4 {
   font-size: inherit;
   font-weight: bold;
   border-bottom: 0.1em dotted;
+  margin-bottom: -0.1em;
   margin-top: 1em;
+}
+h1 {
+  text-align: center;
+}
+h3 {
+  border-bottom: none;
+  margin-bottom: 0;
 }
 header {
   background-color: white;
@@ -46,8 +55,11 @@ header {
 header nav a {
   text-decoration: none;
 }
-header nav a:hover {
-  text-decoration: underline;
+header nav a:hover,
+header nav a:focus {
+  color: white;
+  background-color: #20282a;
+  outline: none;
 }
 header nav a:before {
   content: '[';

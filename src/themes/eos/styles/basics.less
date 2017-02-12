@@ -34,3 +34,22 @@ h1, h2, h3, h4 {
   border-bottom: 0.1em dotted;
   margin-top: 1em;
 }
+header {
+  background-color: @color-text;
+  color: #20282a;
+  nav a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+    &:before {
+      content: '[';
+    }
+    &:after {
+      content: ']';
+    }
+  }
+}
+footer {
+  border-top: 0.1em dotted;
+}

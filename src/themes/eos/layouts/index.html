@@ -1,39 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <title>{{ .Site.Title }}</title>
-  <link rel="stylesheet" href="css/bundle.css">
-</head>
-
-<body>
-  <div class="wrapper">
-    {{ partial "header" . }}
-    <main>
-      <pre style="font-size: 2.2vmin">
-
-dP   dP   dP          dP                                       dP
-88   88   88          88                                       88
-88  .8P  .8P .d8888b. 88 .d8888b. .d8888b. 88d8b.d8b. .d8888b. 88
-88  d8'  d8' 88ooood8 88 88'  `"" 88'  `88 88'`88'`88 88ooood8 dP
-88.d8P8.d8P  88.  ... 88 88.  ... 88.  .88 88  88  88 88.  ...
-8888' Y88'   `88888P' dP `88888P' `88888P' dP  dP  dP `88888P' oo
-
-
-</pre>
-      <p>Hi, I'm Joshua Seigler. I'm a:</p>
-      <h2>Web developer</h2>
-      <p>I like to make websites. Since 2013 I work at XPO Logistics. Front-end web technology like CSS and SVG comes most easily, but I'm also learning to solve problems with Javascript, JS libraries, and C Sharp. See some of my personal projects on GitHub.</p>
-      <h2>Cryptocurrency enthusiast</h2>
-      <p>Bitcoin, and Dash, and other blockchain applications are just starting to change the world. Sound money is key to personal liberty.</p>
-      <h2>Boardgamer</h2>
-      <p>I play a lot of boardgames. You can see my game collection if you like. My favorite games tend towards low-chance high-strategy, with indirect competition and interesting choices.</p>
-      <h2>Artist</h2>
-      <p>I make ink sketches sometimes, for fun and to improve my skill.</p>
-    </main>
-    {{ partial "footer" . }}
-  </div>
-</body>
-
-</html>
+{{ define "main" }}
+  <h2>Posts</h2>
+  <section class="posts">
+    {{ range where .Data.Pages "Section" "posts" }}
+      <a href="{{ .URL }}">{{ .Title }}</a>
+    {{ end }}
+  </section>
+  <ul>
+  </ul>
+{{ end }}

@@ -3,10 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>{{ block "title" }}
-    {{ .Site.Title }}
+  <title>{{ block "title" . }}
+    {{ .Title }} - {{ .Site.Title }}
   {{ end }}</title>
-  <link rel="stylesheet" href="bundle.css">
+  <link rel="stylesheet" href="/css/bundle.css">
 </head>
 
 <body>

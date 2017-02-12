@@ -12,16 +12,16 @@
 // Include Gulp plugins
 var gulp = require('gulp'),
   gutil = require('gulp-util'), // useful Gulp tools, used here for color text on console
-  rename = require('gulp-rename'), // rename files
-  less = require('gulp-less'), // compile LESS into CSS
-  watch = require('gulp-watch'), // monitors files for changes
-  notify = require('gulp-notify'), // pops up OS notifications
-  autoprefix = require('gulp-autoprefixer'), // applies browser prefixes based on data from caniuse.com
-  plumber = require('gulp-plumber'), // allows gulp to continue despite an error
+  clean = require('gulp-clean'), // deletes files and directories
+  rename = require('gulp-rename'), // renames files
+  less = require('gulp-less'), // compiles LESS CSS
   sourcemaps = require('gulp-sourcemaps'), // helps browsers show the original source location of code
+  watch = require('gulp-watch'), // monitors files for changes
+  plumber = require('gulp-plumber'), // lets gulp-watch recover from errors
+  autoprefix = require('gulp-autoprefixer'), // applies browser prefixes based on data from caniuse.com
   svgstore = require('gulp-svgstore'), // combines SVGs into a sprite sheet
   svgmin = require('gulp-svgmin'), // minifies SVGs to save filesize
-  clean = require('gulp-clean'), // for deleting files and directories
+  notify = require('gulp-notify'), // pops up OS notifications
   path = require('path'),
   spawn = require('child_process').spawn,
 // Define source and destination paths
@@ -119,7 +119,7 @@ gulp.task('clean:site', function () {
 
 // Run `hugo` build command in a child process
 gulp.task('build:site', ['clean:site', 'build:less', 'build:icons'], function () {
-  var child = spawn("hugo", ["-s", "./src", "-d", "./build"], {cwd: process.cwd()}),
+  var child = spawn("hugo", ["-s", "./src", "-d", "../dist"], {cwd: process.cwd()}),
     stdout = '',
     stderr = '';
 

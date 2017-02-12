@@ -3,19 +3,15 @@
 
 name = "Eos"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE.md"
+licenselink = "https://mit-license.org/"
 description = ""
-homepage = "http://siteforthistheme.com/"
+homepage = ""
 tags = ["", ""]
 features = ["", ""]
 min_version = 0.18
 
 [author]
-  name = ""
-  homepage = ""
+  name = "Joshua Seigler"
+  homepage = "https://joshua.seigler.net/"
 
-# If porting an existing theme
-[original]
-  name = ""
-  homepage = ""
-  repo = ""
+# Original theme from scratch

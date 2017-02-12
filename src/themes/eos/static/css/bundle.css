@@ -39,6 +39,25 @@ h4 {
   border-bottom: 0.1em dotted;
   margin-top: 1em;
 }
+header {
+  background-color: white;
+  color: #20282a;
+}
+header nav a {
+  text-decoration: none;
+}
+header nav a:hover {
+  text-decoration: underline;
+}
+header nav a:before {
+  content: '[';
+}
+header nav a:after {
+  content: ']';
+}
+footer {
+  border-top: 0.1em dotted;
+}
 /*layout*/
 html {
   font-size: calc(2em);
@@ -46,9 +65,10 @@ html {
 }
 body {
   background-image: url(../img/workstation.jpg), url(../img/gradient.jpg);
-  background-size: 100% auto, auto 133.3vh;
+  background-size: 100% auto, auto 133.3vmin;
   background-position: 100% 0%;
   background-repeat: no-repeat, repeat-x;
+  background-color: white;
   height: 100%;
   font-family: monospace;
   perspective: 68vw;
@@ -104,9 +124,6 @@ main {
   margin: 1em 0;
   -ms-flex-positive: 1;
   flex-grow: 1;
-}
-footer {
-  padding-top: 1em;
 }
 
 /*# sourceMappingURL=bundle.css.map */

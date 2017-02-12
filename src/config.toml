@@ -1,6 +1,14 @@
 languageCode = "en-us"
-title = "My New Hugo Site"
-baseurl = "http://example.org/"
+title = "joshua.seigler.net"
+baseurl = "https://joshua.seigler.net/"
 source = "src/"
-publishDir = "../dest"
+publishDir = "../dist"
 theme = "eos"
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = -1
+[[menu.main]]
+  name = "Posts"
+  url = "/posts"

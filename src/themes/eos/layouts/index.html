@@ -1,5 +1,7 @@
 {{ define "main" }}
-  <h2>Posts</h2>
+  <h1>Welcome!</h1>
+
+  <h2>Recent posts:</h2>
   <section class="posts">
     {{ range where .Data.Pages "Section" "posts" }}
       <a href="{{ .URL }}">{{ .Title }}</a>

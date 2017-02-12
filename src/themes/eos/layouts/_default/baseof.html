@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="/css/bundle.css">
 </head>
 
-<body>
+<body class="{{ .Section | default .Title | urlize }}">
   <div class="wrapper">
     {{ partial "header" . }}
     <main>

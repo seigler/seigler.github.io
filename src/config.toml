@@ -11,4 +11,4 @@ theme = "eos"
   weight = -1
 [[menu.main]]
   name = "Posts"
-  url = "/posts"
+  url = "/posts/"

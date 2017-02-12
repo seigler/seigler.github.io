@@ -1,10 +1,10 @@
 {{ define "main" }}
-  <h1>Posts</h1>
-  {{ range .Data.Pages }}
-    <article>
-      <h2>{{ .Title }}</h2>
-      {{ .Summary }}
-      {{ .More }}
-    </article>
-  {{ end }}
+  <h1>{{ .Title }}</h1>
+  <ul class="post-list">
+    {{ range .Data.Pages }}
+    <li>
+      <a href="{{ .URL }}"><span class="title">{{ .Title }}</span> - <span class="summary">{{ .Summary }}</span></a>
+    </li>
+    {{ end }}
+  </ul>
 {{ end }}

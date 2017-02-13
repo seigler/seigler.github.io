@@ -27,6 +27,7 @@ var gulp = require('gulp'),
   revAll = require('gulp-rev-all'), // hashes static resources, updates references to them
   gulpif = require('gulp-if'), // conditionally process part of a vinyl stream
   htmlbeautify = require('gulp-html-beautify'), // clean up HTML formatting
+  ghpages = require('gulp-gh-pages'), // push a folder to the gh-pages branch
   path = require('path'),
   spawn = require('child_process').spawn,
 // Define source and destination paths
@@ -173,7 +174,14 @@ gulp.task('build:site', ['clean:site', 'build:less', 'build:icons'], function ()
         /\.xml$/g
       ] }))
       .pipe(gulp.dest('./cdn'));
+    gulp.src('./dist/.nojekyll')
+      .pipe(gulp.dest('./cdn'));
   });
+});
+
+gulp.task('deploy', function () {
+  return gulp.src('./cdn/**')
+    .pipe(ghpages());
 });
 
 // Default will run the 'entry' task

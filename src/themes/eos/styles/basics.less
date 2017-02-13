@@ -20,9 +20,11 @@ html {
 }
 a {
   color: inherit;
-  &:hover {
+  &:hover, &:focus {
     background-color: @color-text;
     color: #20282a;
+    text-decoration: none;
+    outline: none;
   }
 }
 ::selection {

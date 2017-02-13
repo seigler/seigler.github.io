@@ -19,9 +19,12 @@ html {
 a {
   color: inherit;
 }
-a:hover {
+a:hover,
+a:focus {
   background-color: white;
   color: #20282a;
+  text-decoration: none;
+  outline: none;
 }
 ::-moz-selection {
   background-color: white;
@@ -95,7 +98,9 @@ body {
   overflow: auto;
   perspective: none;
 }
-.wrapper > * {
+.wrapper > *,
+.wrapper:before,
+.wrapper:after {
   opacity: 0.8;
   transform: translateZ(-50vmin);
 }

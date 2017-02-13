@@ -12,3 +12,9 @@ theme = "eos"
 [[menu.main]]
   name = "Posts"
   url = "/posts/"
+[[menu.main]]
+  name = "Presentations"
+  url = "/presentations/"
+[[menu.main]]
+  name = "Projects"
+  url = "/projects/"

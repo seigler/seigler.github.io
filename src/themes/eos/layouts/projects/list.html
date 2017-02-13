@@ -1,0 +1,11 @@
+{{ define "title" }}Projects{{ end }}
+
+{{ define "main" }}
+  {{ $projects := getJSON "https://api.github.com/users/seigler/repos" }}
+  <h1>Github Projects</h1>
+  <ul>
+    {{ range $projects }}
+      <li><a href="{{ .url }}">{{ .name }}</a></li>
+    {{ end }}
+  </ul>
+{{ end }}

@@ -53,7 +53,8 @@ header nav a {
   text-decoration: none;
 }
 header nav a:hover,
-header nav a:focus {
+header nav a:focus,
+header nav a.active {
   color: white;
   background-color: #20282a;
   outline: none;

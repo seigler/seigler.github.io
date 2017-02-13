@@ -1,9 +1,0 @@
-{{ define "main" }}
-  {{ $projects := getJSON "https://api.github.com/users/seigler/repos" }}
-  <h1>My GitHub Projects</h1>
-  <ul class="post-list">
-    {{ range where $projects "fork" false }}
-      <li><a href="{{ .html_url }}"><span class="title">{{ .name }}</span> - <span class="summary">{{ .description }}</span></a></li>
-    {{ end }}
-  </ul>
-{{ end }}

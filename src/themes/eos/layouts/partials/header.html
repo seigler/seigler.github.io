@@ -1,8 +1,0 @@
-<header>
-  <nav>
-    {{ $currentPage := . }}
-    {{ range .Site.Menus.main }}
-      <a {{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} class="active"{{end}} href="{{.URL}}">{{ .Name }}</a>
-    {{ end }}
-  </nav>
-</header>

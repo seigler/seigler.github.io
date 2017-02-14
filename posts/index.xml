@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on joshua.seigler.net</title>
-    <link>https://seigler.github.io/joshua.seigler.net/posts/index.xml</link>
+    <link>https://joshua.seigler.net/posts/index.xml</link>
     <description>Recent content in Posts on joshua.seigler.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 11 Feb 2017 16:15:16 -0500</lastBuildDate>
-    <atom:link href="https://seigler.github.io/joshua.seigler.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://joshua.seigler.net/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Site redesign!</title>
-      <link>https://seigler.github.io/joshua.seigler.net/posts/site-redesign/</link>
+      <link>https://joshua.seigler.net/posts/site-redesign/</link>
       <pubDate>Sat, 11 Feb 2017 16:15:16 -0500</pubDate>
       
-      <guid>https://seigler.github.io/joshua.seigler.net/posts/site-redesign/</guid>
+      <guid>https://joshua.seigler.net/posts/site-redesign/</guid>
       <description>&lt;p&gt;I rebuilt the site with a from-scratch Hugo theme. Styles are assembled from LESS with a Gulp task runner.
 Afterwards, static assets are revision-hashed, and markup is reformatted.&lt;/p&gt;
 </description>

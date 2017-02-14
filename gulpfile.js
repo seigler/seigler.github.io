@@ -123,6 +123,30 @@ gulp.task('clean:site', function () {
     .pipe(clean());
 });
 
+gulp.task('serve', function () {
+  var child = spawn("hugo", ["serve", "-s", "./src", "-D"], {cwd: process.cwd()}),
+    stdout = '',
+    stderr = '';
+
+  child.stdout.setEncoding('utf8');
+
+  child.stdout.on('data', function (data) {
+    stdout += data;
+    console.log(data);
+  });
+
+  child.stderr.setEncoding('utf8');
+  child.stderr.on('data', function (data) {
+    stderr += data;
+    console.error(gutil.colors.red(data));
+    gutil.beep();
+  });
+
+  child.on('close', function (code) {
+    gutil.log("Done with exit code", code);
+  });
+});
+
 // Run `hugo` build command in a child process
 gulp.task('build:site', ['clean:site', 'build:less', 'build:icons'], function () {
   var child = spawn("hugo", ["-s", "./src", "-d", "../dist"], {cwd: process.cwd()}),

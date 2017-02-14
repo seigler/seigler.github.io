@@ -73,7 +73,7 @@ footer {
 }
 /*layout*/
 html {
-  font-size: calc(2em);
+  font-size: calc(0.8em + 1.3vmin);
   height: 100%;
 }
 body {
@@ -105,9 +105,6 @@ body {
   transform: translateZ(-50vmin);
 }
 @media (min-width: 100vh) {
-  html {
-    font-size: calc(2em);
-  }
   body {
     background-image: url(../img/workstation.jpg), url(../img/gradient.jpg);
     background-size: auto 133.3vh, auto 133vh;

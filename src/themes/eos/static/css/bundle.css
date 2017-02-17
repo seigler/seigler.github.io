@@ -61,6 +61,7 @@ header nav a.active {
   color: white;
   background-color: #20282a;
   outline: none;
+  box-shadow: 0 0 0 1px #20282a;
 }
 header nav a:before {
   content: '[';
@@ -106,11 +107,8 @@ body {
 }
 @media (min-width: 100vh) {
   body {
-    background-image: url(../img/workstation.jpg), url(../img/gradient.jpg);
     background-size: auto 133.3vh, auto 133vh;
     background-position: 100% 0%;
-    background-repeat: no-repeat, repeat-x;
-    font-family: monospace;
     perspective: 68vh;
     perspective-origin: calc(100vw - 31vh) 45vh;
   }

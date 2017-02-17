@@ -33,8 +33,8 @@ var gulp = require('gulp'),
 // Define source and destination paths
   paths = {
     src_less: 'src/themes/eos/styles/',
-//    dest_css: 'src/themes/eos/static/css/',
-    dest_css: 'src/themes/eos/layouts/partials/generated/',
+    dest_css: 'src/themes/eos/static/css/',
+//    dest_css: 'src/themes/eos/layouts/partials/generated/',
     src_icons: 'src/themes/eos/icons/',
     dest_icons: 'src/themes/eos/layouts/partials/generated/'
   };

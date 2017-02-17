@@ -15,8 +15,22 @@
       <pubDate>Sat, 11 Feb 2017 16:15:16 -0500</pubDate>
       
       <guid>https://seigler.github.io/joshua.seigler.net/posts/site-redesign/</guid>
-      <description>&lt;p&gt;I rebuilt the site with a from-scratch Hugo theme. Styles are assembled from LESS with a Gulp task runner.
+      <description>
+
+&lt;p&gt;I rebuilt the site with a from-scratch Hugo theme. Styles are assembled from LESS with a Gulp task runner.
 Afterwards, static assets are revision-hashed, and markup is reformatted.&lt;/p&gt;
+
+&lt;h2 id=&#34;hugo&#34;&gt;Hugo&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; is a super fast, easily installed static site generator. It&amp;rsquo;s a lot like &lt;a href=&#34;https://jekyllrb.com/&#34;&gt;Jekyll&lt;/a&gt;, GitHub&amp;rsquo;s Ruby-powered static site generator. But it brings with it a lot of the Golang philosophy, and unlike Jekyll, Hugo doesn&amp;rsquo;t let you twist its arm into doing a lot of extra stuff like image processing or stylesheet building. It does one thing, templating, really well and really fast. You can do the rest of the stuff on the side.&lt;/p&gt;
+
+&lt;h2 id=&#34;the-rest-of-the-stuff&#34;&gt;The Rest of the Stuff&lt;/h2&gt;
+
+&lt;p&gt;I wanted to write the site styles in LESS, my favorite CSS preprocessor. I used the node LESS compiler with Gulp, the trendiest available task runner. (Kidding, I like Gulp. File streams are a neat idea and worked great for me on this project.)&lt;/p&gt;
+
+&lt;h2 id=&#34;styles&#34;&gt;Styles&lt;/h2&gt;
+
+&lt;p&gt;This design in particular was a pain to get right. I had to find the right perspective and transform settings to distort the screen just right, even when the document was resized. I learned that the &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt; tag ignores most &lt;code&gt;transform&lt;/code&gt; properties, so there isn&amp;rsquo;t a way to have the page scroll &lt;em&gt;with perspective&lt;/em&gt; and keep the scrollbar in the normal place on the right edge of the viewport.&lt;/p&gt;
 </description>
     </item>
     

@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://seigler.github.io/joshua.seigler.net/</loc>
+    <lastmod>2017-02-11T16:15:16-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://seigler.github.io/joshua.seigler.net/posts/site-redesign/</loc>
     <lastmod>2017-02-11T16:15:16-05:00</lastmod>
   </url>
@@ -13,11 +18,6 @@
   
   <url>
     <loc>https://seigler.github.io/joshua.seigler.net/presentations/blockchain/</loc>
-  </url>
-  
-  <url>
-    <loc>https://seigler.github.io/joshua.seigler.net/</loc>
-    <lastmod>2017-02-11T16:15:16-05:00</lastmod>
   </url>
   
   <url>

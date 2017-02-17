@@ -61,6 +61,7 @@ header nav a.active {
   color: white;
   background-color: #20282a;
   outline: none;
+  box-shadow: 0 0 0 1px #20282a;
 }
 header nav a:before {
   content: '[';
@@ -70,6 +71,9 @@ header nav a:after {
 }
 footer {
   border-top: 0.1em dotted;
+}
+code {
+  background-color: rgba(255, 255, 255, 0.15);
 }
 /*layout*/
 html {
@@ -106,11 +110,8 @@ body {
 }
 @media (min-width: 100vh) {
   body {
-    background-image: url(../img/workstation.f5df6d01.jpg), url(../img/gradient.a8837874.jpg);
     background-size: auto 133.3vh, auto 133vh;
     background-position: 100% 0%;
-    background-repeat: no-repeat, repeat-x;
-    font-family: monospace;
     perspective: 68vh;
     perspective-origin: calc(100vw - 31vh) 45vh;
   }
@@ -148,4 +149,4 @@ main {
   text-decoration: underline;
 }
 
-/*# sourceMappingURL=bundle.css.9bd347b4.map */
+/*# sourceMappingURL=bundle.css.3c0521af.map */

@@ -63,16 +63,13 @@ var onError = function (error, task) {
 };
 
 gulp.task('clean:less', function () {
-  return gulp.src([
-    paths.dest_css + 'bundle.css',
-    paths.dest_css + 'bundle.css.map'
-  ], {read: false})
+  return gulp.src([ paths.dest_css + 'bundle*' ], {read: false})
     .pipe(clean());
 });
 
 // Compile LESS to CSS
 gulp.task('build:less', function () {
-  return gulp.src(paths.src_less + 'bundle.less')
+  return gulp.src(paths.src_less + 'bundle*.less')
     .pipe(sourcemaps.init())
     .pipe(plumber({
       errorHandler: function (error) { onError(error, 'LESS'); }
@@ -84,7 +81,6 @@ gulp.task('build:less', function () {
       browsers: ['last 2 versions'],
       cascade: false
     }))
-    .pipe(rename('bundle.css'))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(paths.dest_css)); // path to css directory
 });

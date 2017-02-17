@@ -11,4 +11,8 @@ Afterwards, static assets are revision-hashed, and markup is reformatted.
 
 ## The Rest of the Stuff
 
-I wanted to write the site styles in LESS, my favorite CSS preprocessor. I used the node LESS compiler with Gulp, the trendiest available task runner. (Kidding, I like Gulp. File streams are a neat idea and worked great for me on this project.) I also really wanted to build an SVG sprite from files included in the theme. To do that, I used `gulp-svgstore`. Just out-of-the-box it worked great.
+I wanted to write the site styles in LESS, my favorite CSS preprocessor. I used the node LESS compiler with Gulp, the trendiest available task runner. (Kidding, I like Gulp. File streams are a neat idea and worked great for me on this project.)
+
+## Styles
+
+This design in particular was a pain to get right. I had to find the right perspective and transform settings to distort the screen just right, even when the document was resized. I learned that the `<body>` tag ignores most `transform` properties, so there isn't a way to have the page scroll _with perspective_ and keep the scrollbar in the normal place on the right edge of the viewport.

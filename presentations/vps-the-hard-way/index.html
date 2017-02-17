@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <base href="https://seigler.github.io/joshua.seigler.net/">
+  <title> VPS the Hard Way - joshua.seigler.net </title>
+  <link rel="canonical" href="https://seigler.github.io/joshua.seigler.net/presentations/vps-the-hard-way/">
+  <link rel="stylesheet" href="css/bundle-screen.aa1f427a.css" media="not print">
+  <link rel="stylesheet" href="css/bundle-print.ab3bdff1.css" media="print">
+  <link rel="shortcut icon" href="img/favicon.2c29e0b5.ico" type="image/x-icon"> </head>
+
+<body class="presentations">
+  <div class="wrapper">
+    <header>
+      <nav> <a href="/joshua.seigler.net/">Home</a> <a href="/joshua.seigler.net/about/">About</a> <a href="/joshua.seigler.net/posts/">Posts</a> <a class="active" href="/joshua.seigler.net/presentations/">Presentations</a> <a href="/joshua.seigler.net/projects/">Projects</a> </nav>
+    </header>
+    <main>
+      <article>
+        <h1>VPS the Hard Way</h1>
+        <h3 id="title-slide">Title slide</h3>
+        <p><img src="vps-the-hard-way/VPS-the-hard-way - 01.0230051b.jpg" alt="" /></p>
+        <h3 id="what-is-a-vps">What is a VPS?</h3>
+        <p><img src="vps-the-hard-way/VPS-the-hard-way - 02.ed545a49.jpg" alt="" /> It stands for Virtual Private Server. Basically you get access to a virtual machine running with dozens of others in a rack in a server room somewhere with fast internet. Since it&rsquo;s a virtual machine you can run whatever you want. It&rsquo;s cheap, it&rsquo;s unsupported, and it&rsquo;s all yours.</p>
+        <h3 id="riddle-me-this">Riddle me this!</h3>
+        <p><img src="vps-the-hard-way/VPS-the-hard-way - 03.a5581818.jpg" alt="" /> Why? What good is it?</p>
+        <h3 id="think-back-to-when-you-first-discovered-the-internet-it-was-so-amazing-mostly-because-you-can-do-pretty-much-anything-on-it">Think back to when you first discovered the internet. It was so amazing. Mostly because you can do pretty much anything on it.</h3>
+        <p><img src="vps-the-hard-way/VPS-the-hard-way - 04.2a23ebae.jpg" alt="" /></p>
+        <h3 id="there-s-a-service-for-everything">There&rsquo;s a service for everything!</h3>
+        <p><img src="vps-the-hard-way/VPS-the-hard-way - 05.d22f17a7.jpg" alt="" /></p>
+        <h3 id="so-most-of-us-pick-one-of-the-largest-internet-companies-and-use-them-for-everything-it-s-just-more-convenient">So most of us pick one of the largest internet companies and use them for everything. It&rsquo;s just more convenient.</h3>
+        <p><img src="vps-the-hard-way/VPS-the-hard-way - 06.e9ae14be.jpg" alt="" /> But this also has some downsides. If the company changes its offerings or policies, you don&rsquo;t always have any recourse. You may have a hard time getting your data out of their systems. Also, these companies have very personal, deep knowledge about you. And they sometimes misuse that knowledge. And not just companies&hellip;</p>
+        <h3 id="intruders-and-government-agencies-can-access-your-information-through-subterfuge-or-compulsion">Intruders and government agencies can access your information through subterfuge or compulsion.</h3>
+        <p><img src="vps-the-hard-way/VPS-the-hard-way - 07.cda2475e.jpg" alt="" /> But things aren&rsquo;t hopeless!</p>
+        <h3 id="you-have-the-power">You have the power!</h3>
+        <p><img src="vps-the-hard-way/VPS-the-hard-way - 08.fc656d2d.jpg" alt="" /> We&rsquo;re web developers! We are uniquely equipped to solve these problems, and at the same time pick up some valuable skills. That&rsquo;s what we&rsquo;re going to do today. With a VPS of your own, you can set up alternatives to many of the services offered by internet giants like Google.</p>
+        <h3 id="here-is-a-site-that-catalogs-the-price-of-virtual-private-servers-from-different-providers">Here is a site that catalogs the price of virtual private servers from different providers.</h3>
+        <p><img src="vps-the-hard-way/VPS-the-hard-way - 09.a26bfb27.jpg" alt="" /></p>
+        <h3 id="most-vps-providers-offer-at-least-centos-and-debian-but-you-ll-find-pretty-much-everything-out-there-including-more-desktop-oriented-distros-like-ubuntu">Most VPS providers offer at least CentOS and Debian, but you&rsquo;ll find pretty much everything out there, including more desktop-oriented distros like Ubuntu.</h3>
+        <p><img src="vps-the-hard-way/VPS-the-hard-way - 10.16e3a0b3.jpg" alt="" /> Some providers even let you provide your own OS template. Everyone has different priorities and different recommendations. Later we&rsquo;ll set up a new Debian 7 VPS.</p>
+        <h3 id="where-do-you-find-these-self-hosted-packages-i-like-this-site-alternativeto-which-lists-self-hosted-software-that-can-take-the-place-of-commercial-or-non-free-solutions">Where do you find these self-hosted packages? I like this site, “alternativeTo”, which lists self-hosted software that can take the place of commercial or non-free solutions.</h3>
+        <p><img src="vps-the-hard-way/VPS-the-hard-way - 11.84241af6.jpg" alt="" /></p>
+        <h3 id="ok-let-s-get-our-hands-dirty">Ok, let&rsquo;s get our hands dirty.</h3>
+        <p><img src="vps-the-hard-way/VPS-the-hard-way - 12.1bb0d1ee.jpg" alt="" /> Next: A brief word on password management New server checklist Installing and configuring Nginx, PHP-FPM, and MariaDB Installing a few self-hosted services Installing a self-signed SSL certificate (time permitting) Automating all of this</p>
+        <h3 id="passwords-kinda-suck-if-we-take-security-seriously-you-all-do-right-right-we-end-up-like-that-guy-from-the-matrix-reloaded-with-keys-for-everything-how-can-anyone-keep-that-straight">Passwords kinda suck. If we take security seriously (you all do, right? Right?), we end up like that guy from the Matrix Reloaded, with keys for everything. How can anyone keep that straight?</h3>
+        <p><img src="vps-the-hard-way/VPS-the-hard-way - 13.c4153940.jpg" alt="" /> You can&rsquo;t. &ldquo;Ain&rsquo;t nobody got time for that!&rdquo; So we come up with some scheme that basically lets us use the same thing, or similar things, everywhere. Then you have a new problem. There&rsquo;s a better way. I can talk more about this after the talk, but for now I&rsquo;ll just say that I&rsquo;m never going back to the old way. A password manager is just too convenient and secure.</p>
+        <h2 id="debian-vps-setup">Debian VPS setup</h2>
+        <h3 id="admin-user-setup">Admin user setup</h3>
+        <p>SSH to your VPS as root</p>
+        <pre><code>$ ssh root@###.###.###.###
+</code></pre>
+        <p>Set a new password for root and save it in your password manager.</p>
+        <pre><code># passwd
+</code></pre>
+        <p>Next we need to update the system.</p>
+        <pre><code># apt-get update &amp;amp;&amp;amp; apt-get dist-upgrade
+</code></pre>
+        <p>(this will take a while, and you may have to dismiss some changelog messages and answer a prompt asking permission to disable root login over ssh. Don’t accept the prompt. We’ll disable root login over ssh later. This way we can’t lock ourselves out.)</p>
+        <pre><code># apt-get install sudo
+# adduser username
+# usermod -aG sudo username
+# groupadd sshlogin
+# usermod -aG sshlogin username
+# cat /etc/sudoers
+</code></pre>
+        <p>Confirm that this line is present:</p>
+        <pre><code>%sudo   ALL=(ALL:ALL) ALL
+</code></pre>
+        <p>If not, you can edit /etc/sudoers with # visudo</p>
+        <p>Now, leave this connection open and start a new one.</p>
+        <pre><code>$ ssh username@###.###.###.###
+</code></pre>
+        <p>Confirm that you have root access:</p>
+        <pre><code>$ sudo whoami
+</code></pre>
+        <p>It should say “root”. If this was successful, go ahead and end your first (root) SSH session with Ctrl+D. If you didn’t already disable root login over SSH we’ll do it now.</p>
+        <pre><code>$ sudo nano /etc/ssh/sshd_config
+</code></pre>
+        <p>Find the line <code>#PermitRootLogin no</code> and remove the &ldquo;#&rdquo; to uncomment it. If you want to enable motd or banner do that now. Ctrl+X, save changes Restart ssh daemon with:</p>
+        <pre><code>$ sudo service ssh restart
+</code></pre>
+        <p>Confirm that you can no longer SSH in as root. As one more precaution, we will expire the root password altogether so that the only account with admin access is the new account you’ve just created. The command is:</p>
+        <pre><code>$ sudo passwd -l root
+</code></pre>
+        <p>If you didn&rsquo;t already do it during the dist-upgrade, we should enable unattended security upgrades:</p>
+        <pre><code>$ sudo apt-get install unattended-upgrades
+$ sudo dpkg-reconfigure unattended-upgrades
+</code></pre>
+        <p>You&rsquo;ll see a prompt asking if you want to automatically download and install stable updates. Choose yes.</p>
+        <h2>Firewall</h2>
+        <p>This part’s pretty easy.</p>
+        <pre><code>$ sudo apt-get install ufw
+</code></pre>
+        <p>UFW stands for Uncomplicated Firewall.</p>
+        <pre><code>$ sudo nano /etc/default/ufw
+</code></pre>
+        <p>Make sure that IPv6 is either enabled or disabled, whichever is appropriate for your VPS.</p>
+        <pre><code>$ sudo ufw allow ssh
+$ sudo ufw allow 80/tcp
+$ sudo ufw allow 443/tcp
+$ sudo ufw enable
+$ sudo ufw status
+</code></pre>
+        <p>If you’re worried about getting hammered by port scanners and script kiddies, you can also install fail2ban, which temporarily blocks IP addresses that fail auth attempts too many times. More details on that here: <a href="http://johnny.chadda.se/using-fail2ban-with-nginx-and-ufw/">http://johnny.chadda.se/using-fail2ban-with-nginx-and-ufw/</a></p>
+        <h2 id="optional">Optional</h2>
+        <p>Change the hostname: <a href="https://wiki.debian.org/HowTo/ChangeHostname">https://wiki.debian.org/HowTo/ChangeHostname</a> Kind of a pain.</p>
+        <h2 id="nginx-php-mysql">Nginx, PHP, MySQL</h2>
+        <h3 id="installation">Installation</h3>
+        <pre><code>$ sudo apt-get install nginx php5 php5-fpm php5-cli php-apc php-gd
+$ sudo apt-get install python-software-properties
+$ sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xcbcb082a1bb943db
+$ sudo apt-get install software-properties-common
+</code></pre>
+        <p>Repository details from: <a href="https://downloads.mariadb.org/mariadb/repositories/">https://downloads.mariadb.org/mariadb/repositories/</a></p>
+        <pre><code>$ sudo add-apt-repository 'deb http://ftp.utexas.edu/mariadb/repo/10.0/debian wheezy main'
+$ sudo apt-get update
+$ sudo apt-get install mariadb-server php5-mysql
+</code></pre>
+        <p>Leave the root password blank for now, we’ll set it in a second.</p>
+        <pre><code>$ mysql-secure-installation
+</code></pre>
+        <p>Follow the prompts, taking the recommended actions including creating a root password. Save the mysql root password to your password database.</p>
+        <h3 id="there-are-automated-solutions-for-setting-up-a-new-server-ansible-is-new-and-clean-and-considered-by-many-to-be-the-best-right-now-puppet-and-chef-and-some-others-like-cfengine-and-salt-can-get-the-job-done-too">There are automated solutions for setting up a new server. Ansible is new and clean and considered by many to be the best right now, Puppet and Chef and some others like CFEngine and Salt can get the job done too.</h3>
+        <p><img src="vps-the-hard-way/VPS-the-hard-way - 20.8ba51711.jpg" alt="" /> <a href="https://www.youtube.com/watch?v=up3ofvQNm8c">System provisioning with Ansible – a live demo</a>.</p>
+        <h3 id="ok-let-s-install-freshrss-shaarli-and-limesurvey-first-we-have-to-configure-nginx-i-m-going-to-cheat-a-little-here">Ok let&rsquo;s install FreshRSS, Shaarli, and LimeSurvey. First we have to configure nginx. I&rsquo;m going to cheat a little here.</h3>
+        <p><img src="vps-the-hard-way/VPS-the-hard-way - 21.539f61bd.jpg" alt="" /></p>
+        <pre><code>$ sudo wget https://joshua.seigler.net/code/vps-the-hard-way/default.conf.txt -O /etc/nginx/conf.d/default.conf
+$ sudo rm /etc/nginx/sites-enabled/default
+</code></pre> </article>
+    </main>
+    <footer> Copyright &copy; Joshua Seigler 2017 </footer>
+  </div>
+  <script src="js/app.50716c5f.js"></script>
+</body>
+
+</html>

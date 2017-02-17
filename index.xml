@@ -65,10 +65,236 @@ Afterwards, static assets are revision-hashed, and markup is reformatted.&lt;/p&
     <item>
       <title>Blockchain: a semi-technical explanation</title>
       <link>https://seigler.github.io/joshua.seigler.net/presentations/blockchain/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>https://seigler.github.io/joshua.seigler.net/presentations/blockchain/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=cFJwiTHxiac&#34;&gt;https://www.youtube.com/watch?v=cFJwiTHxiac&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>VPS the Hard Way</title>
+      <link>https://seigler.github.io/joshua.seigler.net/presentations/vps-the-hard-way/</link>
+      <pubDate>Tue, 16 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://seigler.github.io/joshua.seigler.net/presentations/vps-the-hard-way/</guid>
+      <description>
+
+&lt;h3 id=&#34;title-slide&#34;&gt;Title slide&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;vps-the-hard-way/VPS-the-hard-way - 01.0230051b.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;what-is-a-vps&#34;&gt;What is a VPS?&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;vps-the-hard-way/VPS-the-hard-way - 02.ed545a49.jpg&#34; alt=&#34;&#34; /&gt;
+It stands for Virtual Private Server. Basically you get access to a virtual machine running with dozens of others in a rack in a server room somewhere with fast internet.
+Since it&amp;rsquo;s a virtual machine you can run whatever you want. It&amp;rsquo;s cheap, it&amp;rsquo;s unsupported, and it&amp;rsquo;s all yours.&lt;/p&gt;
+
+&lt;h3 id=&#34;riddle-me-this&#34;&gt;Riddle me this!&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;vps-the-hard-way/VPS-the-hard-way - 03.a5581818.jpg&#34; alt=&#34;&#34; /&gt;
+Why?
+What good is it?&lt;/p&gt;
+
+&lt;h3 id=&#34;think-back-to-when-you-first-discovered-the-internet-it-was-so-amazing-mostly-because-you-can-do-pretty-much-anything-on-it&#34;&gt;Think back to when you first discovered the internet. It was so amazing. Mostly because you can do pretty much anything on it.&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;vps-the-hard-way/VPS-the-hard-way - 04.2a23ebae.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;there-s-a-service-for-everything&#34;&gt;There&amp;rsquo;s a service for everything!&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;vps-the-hard-way/VPS-the-hard-way - 05.d22f17a7.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;so-most-of-us-pick-one-of-the-largest-internet-companies-and-use-them-for-everything-it-s-just-more-convenient&#34;&gt;So most of us pick one of the largest internet companies and use them for everything. It&amp;rsquo;s just more convenient.&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;vps-the-hard-way/VPS-the-hard-way - 06.e9ae14be.jpg&#34; alt=&#34;&#34; /&gt;
+But this also has some downsides.
+If the company changes its offerings or policies, you don&amp;rsquo;t always have any recourse. You may have a hard time getting your data out of their systems.
+Also, these companies have very personal, deep knowledge about you. And they sometimes misuse that knowledge.
+And not just companies&amp;hellip;&lt;/p&gt;
+
+&lt;h3 id=&#34;intruders-and-government-agencies-can-access-your-information-through-subterfuge-or-compulsion&#34;&gt;Intruders and government agencies can access your information through subterfuge or compulsion.&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;vps-the-hard-way/VPS-the-hard-way - 07.cda2475e.jpg&#34; alt=&#34;&#34; /&gt;
+But things aren&amp;rsquo;t hopeless!&lt;/p&gt;
+
+&lt;h3 id=&#34;you-have-the-power&#34;&gt;You have the power!&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;vps-the-hard-way/VPS-the-hard-way - 08.fc656d2d.jpg&#34; alt=&#34;&#34; /&gt;
+We&amp;rsquo;re web developers! We are uniquely equipped to solve these problems, and at the same time pick up some valuable skills.
+That&amp;rsquo;s what we&amp;rsquo;re going to do today. With a VPS of your own, you can set up alternatives to many of the services offered by internet giants like Google.&lt;/p&gt;
+
+&lt;h3 id=&#34;here-is-a-site-that-catalogs-the-price-of-virtual-private-servers-from-different-providers&#34;&gt;Here is a site that catalogs the price of virtual private servers from different providers.&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;vps-the-hard-way/VPS-the-hard-way - 09.a26bfb27.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;most-vps-providers-offer-at-least-centos-and-debian-but-you-ll-find-pretty-much-everything-out-there-including-more-desktop-oriented-distros-like-ubuntu&#34;&gt;Most VPS providers offer at least CentOS and Debian, but you&amp;rsquo;ll find pretty much everything out there, including more desktop-oriented distros like Ubuntu.&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;vps-the-hard-way/VPS-the-hard-way - 10.16e3a0b3.jpg&#34; alt=&#34;&#34; /&gt;
+Some providers even let you provide your own OS template.
+Everyone has different priorities and different recommendations. Later we&amp;rsquo;ll set up a new Debian 7 VPS.&lt;/p&gt;
+
+&lt;h3 id=&#34;where-do-you-find-these-self-hosted-packages-i-like-this-site-alternativeto-which-lists-self-hosted-software-that-can-take-the-place-of-commercial-or-non-free-solutions&#34;&gt;Where do you find these self-hosted packages? I like this site, “alternativeTo”, which lists self-hosted software that can take the place of commercial or non-free solutions.&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;vps-the-hard-way/VPS-the-hard-way - 11.84241af6.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;ok-let-s-get-our-hands-dirty&#34;&gt;Ok, let&amp;rsquo;s get our hands dirty.&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;vps-the-hard-way/VPS-the-hard-way - 12.1bb0d1ee.jpg&#34; alt=&#34;&#34; /&gt;
+Next:
+A brief word on password management
+New server checklist
+Installing and configuring Nginx, PHP-FPM, and MariaDB
+Installing a few self-hosted services
+Installing a self-signed SSL certificate (time permitting)
+Automating all of this&lt;/p&gt;
+
+&lt;h3 id=&#34;passwords-kinda-suck-if-we-take-security-seriously-you-all-do-right-right-we-end-up-like-that-guy-from-the-matrix-reloaded-with-keys-for-everything-how-can-anyone-keep-that-straight&#34;&gt;Passwords kinda suck. If we take security seriously (you all do, right? Right?), we end up like that guy from the Matrix Reloaded, with keys for everything. How can anyone keep that straight?&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;vps-the-hard-way/VPS-the-hard-way - 13.c4153940.jpg&#34; alt=&#34;&#34; /&gt;
+You can&amp;rsquo;t. &amp;ldquo;Ain&amp;rsquo;t nobody got time for that!&amp;rdquo;
+So we come up with some scheme that basically lets us use the same thing, or similar things, everywhere. Then you have a new problem.
+There&amp;rsquo;s a better way. I can talk more about this after the talk, but for now I&amp;rsquo;ll just say that I&amp;rsquo;m never going back to the old way. A password manager is just too convenient and secure.&lt;/p&gt;
+
+&lt;h2 id=&#34;debian-vps-setup&#34;&gt;Debian VPS setup&lt;/h2&gt;
+
+&lt;h3 id=&#34;admin-user-setup&#34;&gt;Admin user setup&lt;/h3&gt;
+
+&lt;p&gt;SSH to your VPS as root&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ ssh root@###.###.###.###
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Set a new password for root and save it in your password manager.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# passwd
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next we need to update the system.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# apt-get update &amp;amp;amp;&amp;amp;amp; apt-get dist-upgrade
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(this will take a while, and you may have to dismiss some changelog messages and answer a prompt asking permission to disable root login over ssh. Don’t accept the prompt. We’ll disable root login over ssh later. This way we can’t lock ourselves out.)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# apt-get install sudo
+# adduser username
+# usermod -aG sudo username
+# groupadd sshlogin
+# usermod -aG sshlogin username
+# cat /etc/sudoers
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Confirm that this line is present:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;%sudo   ALL=(ALL:ALL) ALL
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If not, you can edit /etc/sudoers with # visudo&lt;/p&gt;
+
+&lt;p&gt;Now, leave this connection open and start a new one.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ ssh username@###.###.###.###
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Confirm that you have root access:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo whoami
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It should say “root”.
+If this was successful, go ahead and end your first (root) SSH session with Ctrl+D.
+If you didn’t already disable root login over SSH we’ll do it now.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo nano /etc/ssh/sshd_config
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Find the line &lt;code&gt;#PermitRootLogin no&lt;/code&gt; and remove the &amp;ldquo;#&amp;rdquo; to uncomment it.
+If you want to enable motd or banner do that now.
+Ctrl+X, save changes
+Restart ssh daemon with:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo service ssh restart
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Confirm that you can no longer SSH in as root.
+As one more precaution, we will expire the root password altogether so that the only account with admin access is the new account you’ve just created. The command is:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo passwd -l root
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you didn&amp;rsquo;t already do it during the dist-upgrade, we should enable unattended security upgrades:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo apt-get install unattended-upgrades
+$ sudo dpkg-reconfigure unattended-upgrades
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You&amp;rsquo;ll see a prompt asking if you want to automatically download and install stable updates. Choose yes.&lt;/p&gt;
+
+&lt;h2&gt;Firewall&lt;/h2&gt;
+
+&lt;p&gt;This part’s pretty easy.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo apt-get install ufw
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;UFW stands for Uncomplicated Firewall.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo nano /etc/default/ufw
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Make sure that IPv6 is either enabled or disabled, whichever is appropriate for your VPS.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo ufw allow ssh
+$ sudo ufw allow 80/tcp
+$ sudo ufw allow 443/tcp
+$ sudo ufw enable
+$ sudo ufw status
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you’re worried about getting hammered by port scanners and script kiddies, you can also install fail2ban, which temporarily blocks IP addresses that fail auth attempts too many times.
+More details on that here: &lt;a href=&#34;http://johnny.chadda.se/using-fail2ban-with-nginx-and-ufw/&#34;&gt;http://johnny.chadda.se/using-fail2ban-with-nginx-and-ufw/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;optional&#34;&gt;Optional&lt;/h2&gt;
+
+&lt;p&gt;Change the hostname: &lt;a href=&#34;https://wiki.debian.org/HowTo/ChangeHostname&#34;&gt;https://wiki.debian.org/HowTo/ChangeHostname&lt;/a&gt;
+Kind of a pain.&lt;/p&gt;
+
+&lt;h2 id=&#34;nginx-php-mysql&#34;&gt;Nginx, PHP, MySQL&lt;/h2&gt;
+
+&lt;h3 id=&#34;installation&#34;&gt;Installation&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo apt-get install nginx php5 php5-fpm php5-cli php-apc php-gd
+$ sudo apt-get install python-software-properties
+$ sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xcbcb082a1bb943db
+$ sudo apt-get install software-properties-common
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Repository details from: &lt;a href=&#34;https://downloads.mariadb.org/mariadb/repositories/&#34;&gt;https://downloads.mariadb.org/mariadb/repositories/&lt;/a&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo add-apt-repository &#39;deb http://ftp.utexas.edu/mariadb/repo/10.0/debian wheezy main&#39;
+$ sudo apt-get update
+$ sudo apt-get install mariadb-server php5-mysql
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Leave the root password blank for now, we’ll set it in a second.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ mysql-secure-installation
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Follow the prompts, taking the recommended actions including creating a root password. Save the mysql root password to your password database.&lt;/p&gt;
+
+&lt;h3 id=&#34;there-are-automated-solutions-for-setting-up-a-new-server-ansible-is-new-and-clean-and-considered-by-many-to-be-the-best-right-now-puppet-and-chef-and-some-others-like-cfengine-and-salt-can-get-the-job-done-too&#34;&gt;There are automated solutions for setting up a new server. Ansible is new and clean and considered by many to be the best right now, Puppet and Chef and some others like CFEngine and Salt can get the job done too.&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;vps-the-hard-way/VPS-the-hard-way - 20.8ba51711.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;a href=&#34;https://www.youtube.com/watch?v=up3ofvQNm8c&#34;&gt;System provisioning with Ansible – a live demo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;ok-let-s-install-freshrss-shaarli-and-limesurvey-first-we-have-to-configure-nginx-i-m-going-to-cheat-a-little-here&#34;&gt;Ok let&amp;rsquo;s install FreshRSS, Shaarli, and LimeSurvey. First we have to configure nginx. I&amp;rsquo;m going to cheat a little here.&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;vps-the-hard-way/VPS-the-hard-way - 21.539f61bd.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo wget https://joshua.seigler.net/code/vps-the-hard-way/default.conf.txt -O /etc/nginx/conf.d/default.conf
+$ sudo rm /etc/nginx/sites-enabled/default
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     

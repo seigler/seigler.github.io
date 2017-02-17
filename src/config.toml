@@ -4,8 +4,4 @@ baseurl = "https://seigler.github.io/joshua.seigler.net/"
 source = "src/"
 publishDir = "../dist"
 theme = "eos"
-
-[[menu.main]]
-  name = "Home"
-  url = "/"
-  weight = -1
+SectionPagesMenu = "main"

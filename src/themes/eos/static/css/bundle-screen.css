@@ -75,6 +75,19 @@ footer {
 code {
   background-color: rgba(255, 255, 255, 0.15);
 }
+pre {
+  background-color: rgba(255, 255, 255, 0.15);
+  white-space: pre-wrap;
+}
+pre code {
+  background-color: transparent;
+}
+img {
+  max-width: 100%;
+}
+p {
+  margin-bottom: 1em;
+}
 /*layout*/
 html {
   font-size: calc(0.8em + 1.3vmin);

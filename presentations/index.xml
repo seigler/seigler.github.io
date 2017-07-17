@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Presentations on joshua.seigler.net</title>
-    <link>https://seigler.github.io/joshua.seigler.net/presentations/</link>
-    <description>Recent content in Presentations on joshua.seigler.net</description>
+    <title>Presentations on seigler.github.io</title>
+    <link>https://seigler.github.io/presentations/</link>
+    <description>Recent content in Presentations on seigler.github.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://seigler.github.io/joshua.seigler.net/presentations/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://seigler.github.io/presentations/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Blockchain: a semi-technical explanation</title>
-      <link>https://seigler.github.io/joshua.seigler.net/presentations/blockchain/</link>
+      <link>https://seigler.github.io/presentations/blockchain/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://seigler.github.io/joshua.seigler.net/presentations/blockchain/</guid>
+      <guid>https://seigler.github.io/presentations/blockchain/</guid>
       <description>https://www.youtube.com/watch?v=cFJwiTHxiac</description>
     </item>
     
     <item>
       <title>VPS the Hard Way</title>
-      <link>https://seigler.github.io/joshua.seigler.net/presentations/vps-the-hard-way/</link>
+      <link>https://seigler.github.io/presentations/vps-the-hard-way/</link>
       <pubDate>Tue, 16 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://seigler.github.io/joshua.seigler.net/presentations/vps-the-hard-way/</guid>
+      <guid>https://seigler.github.io/presentations/vps-the-hard-way/</guid>
       <description>Title slide What is a VPS? It stands for Virtual Private Server. Basically you get access to a virtual machine running with dozens of others in a rack in a server room somewhere with fast internet. Since it&amp;rsquo;s a virtual machine you can run whatever you want. It&amp;rsquo;s cheap, it&amp;rsquo;s unsupported, and it&amp;rsquo;s all yours.
 Riddle me this! Why? What good is it?
 Think back to when you first discovered the internet.</description>

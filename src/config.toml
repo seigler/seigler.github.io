@@ -1,6 +1,6 @@
 languageCode = "en-us"
-title = "joshua.seigler.net"
-baseurl = "https://seigler.github.io/joshua.seigler.net/"
+title = "seigler.github.io"
+baseurl = "https://seigler.github.io/"
 source = "src/"
 publishDir = "../dist"
 theme = "eos"

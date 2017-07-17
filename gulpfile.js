@@ -202,7 +202,9 @@ gulp.task('build:site', ['clean:site', 'build:less', 'build:icons'], function ()
 
 gulp.task('deploy', function () {
   return gulp.src('./cdn/**')
-    .pipe(ghpages());
+    .pipe(ghpages({
+      branch: 'master'
+    }));
 });
 
 // Default will run the 'entry' task

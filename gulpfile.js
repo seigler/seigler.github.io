@@ -192,7 +192,8 @@ gulp.task('build:site', ['clean:site', 'build:less', 'build:icons'], function ()
       .pipe(revAll.revision({ dontRenameFile: [
         /^\/favicon\.ico$/g,
         /\.html$/g,
-        /\.xml$/g
+        /\.xml$/g,
+        /\.svg$/g
       ] }))
       .pipe(gulp.dest('./cdn'));
     gulp.src('./dist/.nojekyll')

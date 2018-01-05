@@ -90,7 +90,7 @@ p {
 }
 /*layout*/
 html {
-  font-size: calc(0.8em + 1.3vmin);
+  font-size: calc(1em + 0.8vh + 0.5vmin);
   height: 100%;
 }
 body {

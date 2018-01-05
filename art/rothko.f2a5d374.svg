@@ -1,0 +1,66 @@
+<svg width="100%" height="100%" viewBox="0 0 300 400" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="paint" x="0" y="0">
+      <feTurbulence id="turbSpread" result="turbulenceFine" type="fractalNoise" baseFrequency="4" numOctaves="1"/>
+      <feTurbulence id="turbDistortion" seed="0" result="turbulenceFat" type="fractalNoise" baseFrequency="0.005" numOctaves="5"/>
+      <feDisplacementMap in="SourceGraphic" in2="turbulenceFat" result="sloppy" scale="4"/>
+      <feGaussianBlur in="sloppy" result="blurred" stdDeviation="3" />
+      <feDisplacementMap in="blurred" in2="turbulenceFine" result="final" scale="5"/>
+    </filter>
+  </defs>
+  <svg viewBox="0 0 300 400" x="0" y="0" width="300" height="400" id="rects" filter="url(#paint)"></svg>
+  <script type="text/javascript">
+    <![CDATA[
+      function randomHsl() {
+        return 'hsl(' + (Math.random() * 360) + ', ' + (Math.pow(Math.random(), 4) * 90 + 10) + '%, '+ (Math.random() * 85 + 5) +'%)';
+      }
+      let stripes = Math.max(1, Math.floor(Math.random() * 4 + 1.7));
+      let gap = Math.pow(Math.random(), 1.5) * 8 + 4;
+      let mainWidth = 300 - gap + Math.random() * 60 - 60;
+      let mainHeight = 400 - gap + Math.random() * 60 - 60;
+      let shapes = Array(stripes);
+      let seed = Math.floor(Math.random() * 100000);
+      document.getElementById('turbSpread').setAttributeNS(null, 'seed', seed);
+      document.getElementById('turbDistortion').setAttributeNS(null, 'seed', seed);
+      for (let i=0; i < stripes; i++) {
+        shapes[i] = {
+          color: randomHsl(),
+          height: Math.random(),
+          width: mainWidth + (Math.random() < 0.2 ? Math.random() * 100 - 50 : 0),
+          opacity: 1 - Math.pow(Math.random(), 5),
+          x: null,
+          y: null
+        };
+      }
+      let totalHeight = 0;
+      for (let i=0; i < stripes; i++) { totalHeight += shapes[i].height; }
+      let heightScale = (mainHeight - (gap * (stripes - 1))) / totalHeight;
+      let cumY = (400 - mainHeight) / 2;
+      for (let i=0; i < stripes; i++) {
+        shapes[i].x = 150 - shapes[i].width / 2;
+        shapes[i].y = cumY;
+        shapes[i].height *= heightScale;
+        cumY += shapes[i].height + gap;
+      }
+      shapes.unshift({
+        color: randomHsl(),
+        height: 500,
+        width: 400,
+        x: -50,
+        y: -50
+      });
+      let domRects = document.getElementById('rects');
+      let xmlns = "http://www.w3.org/2000/svg";
+      for (let i=0; i < shapes.length; i++) {
+        let newRect = document.createElementNS(xmlns, 'rect');
+        newRect.setAttributeNS(null, 'x', shapes[i].x);
+        newRect.setAttributeNS(null, 'y', shapes[i].y);
+        newRect.setAttributeNS(null, 'height', shapes[i].height);
+        newRect.setAttributeNS(null, 'width', shapes[i].width);
+        newRect.setAttributeNS(null, 'fill', shapes[i].color);
+        newRect.setAttributeNS(null, 'opacity', shapes[i].opacity);
+        domRects.appendChild(newRect);
+      }
+    ]]>
+  </script>
+</svg>

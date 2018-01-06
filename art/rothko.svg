@@ -1,11 +1,14 @@
 <svg width="100%" height="100%" viewBox="0 0 300 400" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <filter id="paint" x="0" y="0">
-      <feTurbulence id="turbSpread" result="turbulenceFine" type="fractalNoise" baseFrequency="4" numOctaves="1"/>
-      <feTurbulence id="turbDistortion" seed="0" result="turbulenceFat" type="fractalNoise" baseFrequency="0.005" numOctaves="5"/>
-      <feDisplacementMap in="SourceGraphic" in2="turbulenceFat" result="sloppy" scale="4"/>
-      <feGaussianBlur in="sloppy" result="blurred" stdDeviation="3" />
-      <feDisplacementMap in="blurred" in2="turbulenceFine" result="final" scale="5"/>
+      <feTurbulence result="turbulenceFine" seed="0" type="fractalNoise" baseFrequency="0.2" numOctaves="3"/>
+      <feTurbulence result="turbulenceFat" seed="0" type="fractalNoise" baseFrequency="0.05" numOctaves="4"/>
+      <feDisplacementMap in="SourceGraphic" in2="turbulenceFat" scale="10"/>
+      <feDisplacementMap in2="turbulenceFine" scale="5"/>
+      <feGaussianBlur stdDeviation="0 2" />
+      <feDisplacementMap in2="turbulenceFine" scale="-5"/>
+      <feGaussianBlur stdDeviation="2 0" />
+      <feDisplacementMap in2="turbulenceFat" scale="-10"/>
     </filter>
   </defs>
   <svg viewBox="0 0 300 400" x="0" y="0" width="300" height="400" id="rects" filter="url(#paint)"></svg>
@@ -19,9 +22,10 @@
       let mainWidth = 300 - gap + Math.random() * 60 - 60;
       let mainHeight = 400 - gap + Math.random() * 60 - 60;
       let shapes = Array(stripes);
-      let seed = Math.floor(Math.random() * 100000);
-      document.getElementById('turbSpread').setAttributeNS(null, 'seed', seed);
-      document.getElementById('turbDistortion').setAttributeNS(null, 'seed', seed);
+      let seedables = document.querySelectorAll('[seed]');
+      for (let i = 0; i < seedables.length; ++i) {
+        seedables[i].setAttributeNS(null, 'seed', Math.floor(Math.random() * 100000));
+      }
       for (let i=0; i < stripes; i++) {
         shapes[i] = {
           color: randomHsl(),

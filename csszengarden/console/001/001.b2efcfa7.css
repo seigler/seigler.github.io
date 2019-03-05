@@ -116,7 +116,7 @@ body::after {
 	bottom: 0;
 	right: 0;
 	z-index: 1;
-	background: transparent url(monitor.ba9ebc65.png);
+	background: transparent url(monitor.93f9abd7.png);
 
 	-webkit-background-size: 100% 100%;
 	-moz-background-size: 100% 100%;
@@ -199,15 +199,15 @@ footer::before {
 	font-family: pixChicagoCSSZenGarden;
 	src: url('pixChicago.257b4c41.eot'),
 	     url('pixChicago.257b4c41.eot?#ieFix') format('embedded-opentype'),
-	     url('pixChicago.b00e5ec9.woff') format('woff'),
+	     url('pixChicago.6bc798d0.woff') format('woff'),
 	     url('pixChicago.b2ddc0f3.ttf') format('truetype');
 }
 
 @font-face {
 	font-family: FreePixelCSSZenGarden;
-	src: url('FreePixel.7f8cb318.eot'),
+	src: url('FreePixel.3c8610ed.eot'),
 	     url('pixChicago.257b4c41.eot?#ieFix') format('embedded-opentype'),
-	     url('FreePixel.7b0257a4.woff') format('woff'),
+	     url('FreePixel.86998da8.woff') format('woff'),
 	     url('FreePixel.4b6df52b.ttf') format('truetype');
 }
 

@@ -81,7 +81,7 @@ html {
   height: 100%;
 }
 body {
-  background-image: url(../img/workstation.e08e8026.jpg), url(../img/gradient.a8837874.jpg);
+  background-image: url(../img/workstation.a350cf94.jpg), url(../img/gradient.a8837874.jpg);
   background-size: 100% auto, auto 133.3vmin;
   background-position: 100% 0%;
   background-repeat: no-repeat, repeat-x;
@@ -149,4 +149,4 @@ main {
   text-decoration: underline;
 }
 
-/*# sourceMappingURL=bundle.css.ec318510.map */
+/*# sourceMappingURL=bundle.css.eccff24f.map */

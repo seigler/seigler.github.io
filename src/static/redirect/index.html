@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>URL hash redirector</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; }
+    body {
+      font-family: sans-serif;
+      background-color: #EEE;
+      color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    h1 {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Redirecting to:<br><a id="destination" href="#"></a></h1>
+</body>
+<script>
+  var dest = window.location;
+  var link = document.getElementById('destination');
+  function redirect() {
+    window.location = dest;
+  }
+  if (window.location.hash) {
+    dest = atob(window.location.hash.substr(1)); // base64 decode URL hash
+    link.href = dest;
+    link.innerHTML = dest;
+    window.setTimeout(redirect, 3000);
+  }
+</script>
+</html>

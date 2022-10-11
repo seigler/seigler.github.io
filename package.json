@@ -1,0 +1,57 @@
+{
+  "name": "seigler.github.io",
+  "version": "1.0.0",
+  "description": "GitHub personal site, to showcase projects in a more personalized way",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seigler/seigler.github.io.git"
+  },
+  "keywords": [
+    "websites"
+  ],
+  "author": "Joshua Seigler",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seigler/seigler.github.io/issues"
+  },
+  "homepage": "https://github.com/seigler/seigler.github.io#readme",
+  "prettier": {
+    "arrowParens": "always",
+    "bracketSameLine": true,
+    "bracketSpacing": true,
+    "embeddedLanguageFormatting": "auto",
+    "endOfLine": "lf",
+    "htmlWhitespaceSensitivity": "css",
+    "insertPragma": false,
+    "jsxSingleQuote": false,
+    "printWidth": 80,
+    "proseWrap": "preserve",
+    "quoteProps": "as-needed",
+    "requirePragma": false,
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "none",
+    "useTabs": false,
+    "vueIndentScriptAndStyle": false
+  },
+  "devDependencies": {
+    "@types/http-link-header": "^1.0.3",
+    "@types/parse-link-header": "^2.0.0",
+    "buffer": "^6.0.3",
+    "parcel": "^2.7.0",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "@preact/signals": "^1.1.1",
+    "http-link-header": "^1.0.5",
+    "preact": "^10.11.1"
+  }
+}

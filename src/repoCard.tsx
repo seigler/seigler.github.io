@@ -17,11 +17,21 @@ export function RepoCard({ repo }: { repo: GithubRepo }) {
   } = repo
   return (
     <div class="card">
-      <header style={{ display: 'flex', justifyContent: 'space-between' }}>
+      <header
+        style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          flexWrap: 'wrap'
+        }}>
         <strong>
-          <a href={html_url}>{name}</a>
+          <a href={homepage || html_url}>{name}</a>
         </strong>
         {stargazers_count ? <div>{stargazers_count}⭐</div> : null}
+        {homepage && (
+          <div style={{ width: '100%', fontSize: '0.8em' }}>
+            <a href={html_url}>source</a>
+          </div>
+        )}
       </header>
       <p style={{ flexGrow: 1 }}>{description}</p>
       <footer>

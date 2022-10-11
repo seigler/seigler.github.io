@@ -15,6 +15,7 @@ export type GithubRepo = {
   stargazers_count: number
   topics: string[]
   fork: boolean
+  archived: boolean
 }
 
 const sourceFullName = 'seigler/seigler.github.io'
@@ -33,6 +34,8 @@ const topics = computed(() => {
 const isLoading = signal(true)
 const filter = signal<(r: GithubRepo) => boolean>(() => true)
 
+const filteredRepos = computed(() => repos.value.filter(filter.value))
+
 function fetchDataUntilNoNext(uri: string) {
   fetch(uri)
     .then((response) => {
@@ -46,8 +49,8 @@ function fetchDataUntilNoNext(uri: string) {
       }
       return response.json()
     })
-    .then((data) => {
-      repos.value = repos.value.concat(data)
+    .then((data: GithubRepo[]) => {
+      repos.value = repos.value.concat(data.filter((r) => !r.archived))
       if (isLoading.value === false) {
         repos.value = [
           ...repos.value.sort((a, b) =>
@@ -95,7 +98,7 @@ function App() {
         <span class="loader"></span>
       ) : (
         <main class="grid-container">
-          {repos.value.filter(filter.value).map((repo) => (
+          {filteredRepos.value.map((repo) => (
             <div key={repo.id} className="grid-item" style={{ '--width': '4' }}>
               <RepoCard repo={repo} />
             </div>

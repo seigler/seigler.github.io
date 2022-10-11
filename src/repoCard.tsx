@@ -1,19 +1,16 @@
 import { h, Fragment, render } from 'preact'
 import type { GithubRepo } from './App'
-import dayjs from 'dayjs'
+import * as dayjs from 'dayjs'
 
 export function RepoCard({ repo }: { repo: GithubRepo }) {
   const {
-    id,
     name,
-    full_name,
     html_url,
     created_at,
     description,
     homepage,
     stargazers_count,
-    topics,
-    fork
+    topics
   } = repo
   return (
     <div class="card">

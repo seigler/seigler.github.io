@@ -28,6 +28,7 @@ const topics = computed(() => {
   return [...map.entries()]
     .map(([topic, count]) => ({ topic, count }))
     .filter(({ count }) => count > 1)
+    .sort((a, b) => b.count - a.count)
 })
 const isLoading = signal(true)
 const filter = signal<(r: GithubRepo) => boolean>(() => true)

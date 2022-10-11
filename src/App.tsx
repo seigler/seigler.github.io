@@ -10,11 +10,14 @@ export type GithubRepo = {
   full_name: string
   html_url: string
   created_at: string
+  description: string | null
   homepage: string | null
   stargazers_count: number
   topics: string[]
   fork: boolean
 }
+
+const sourceFullName = 'seigler/seigler.github.io'
 
 const repos = signal<GithubRepo[]>([])
 const topics = computed(() => {
@@ -27,6 +30,7 @@ const topics = computed(() => {
     .filter(({ count }) => count > 1)
 })
 const isLoading = signal(true)
+const filter = signal<(r: GithubRepo) => boolean>(() => true)
 
 function fetchDataUntilNoNext(uri: string) {
   fetch(uri)
@@ -43,6 +47,17 @@ function fetchDataUntilNoNext(uri: string) {
     })
     .then((data) => {
       repos.value = repos.value.concat(data)
+      if (isLoading.value === false) {
+        repos.value = [
+          ...repos.value.sort((a, b) =>
+            a.created_at < b.created_at
+              ? 1
+              : a.created_at > b.created_at
+              ? -1
+              : 0
+          )
+        ]
+      }
     })
     .catch((reason) => console.error("Couldn't fetch repos because:", reason))
 }
@@ -60,17 +75,37 @@ function App() {
     <>
       <header>
         <h1>Joshua Seigler's github repos</h1>
+        <nav
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            gap: 'var(--gap)'
+          }}>
+          <button onClick={() => (filter.value = () => true)}>All</button>
+          {topics.value.map(({ topic, count }) => (
+            <button
+              onClick={() => (filter.value = (r) => r.topics.includes(topic))}>
+              {topic}: {count}
+            </button>
+          ))}
+        </nav>
       </header>
-      <main>
-        {topics.value.map(({ topic, count }) => (
-          <div>
-            {topic}: {count}
-          </div>
-        ))}
-        {repos.value.map((repo) => (
-          <RepoCard repo={repo} />
-        ))}
-      </main>
+      {isLoading.value ? (
+        <span class="loader"></span>
+      ) : (
+        <main class="grid-container">
+          {repos.value.filter(filter.value).map((repo) => (
+            <div key={repo.id} className="grid-item" style={{ '--width': '4' }}>
+              <RepoCard repo={repo} />
+            </div>
+          ))}
+        </main>
+      )}
+      <footer>
+        Styles based on <a href="https://simplecss.org/">simple.css</a>. Data
+        from GitHub API.{' '}
+        <a href={`https://github.com/${sourceFullName}`}>Source code</a>
+      </footer>
     </>
   )
 }

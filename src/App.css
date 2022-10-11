@@ -13,6 +13,9 @@ My updates:
     'Helvetica Neue', sans-serif;
   --mono-font: Consolas, Menlo, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 
+  /* Layout */
+  --gap: 1rem;
+
   /* Default (light) theme */
   --bg: #fff;
   --accent-bg: #f5f7ff;
@@ -83,7 +86,7 @@ body {
   font-size: 1.15rem;
   line-height: 1.5;
   display: grid;
-  grid-template-columns: 1fr min(45rem, 90%) 1fr;
+  grid-template-columns: 1fr min(80rem, 90%) 1fr;
   margin: 0;
 }
 #root > * {
@@ -645,7 +648,77 @@ progress:indeterminate::-moz-progress-bar {
   background-color: var(--accent-bg);
 }
 
+/* Loader */
+
+.loader {
+  width: 100%;
+  height: 12px;
+  display: inline-block;
+  background-color: var(--bg);
+  background-image: linear-gradient(
+    45deg,
+    var(--border) 25%,
+    transparent 25%,
+    transparent 50%,
+    var(--border) 50%,
+    var(--border) 75%,
+    transparent 75%,
+    transparent
+  );
+  font-size: 30px;
+  background-size: 1em 1em;
+  animation: barStripe 1s linear infinite;
+}
+
+@keyframes barStripe {
+  0% {
+    background-position: 1em 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* My additions */
+
 a.isActive {
   background-color: var(--accent);
   color: var(--bg) !important;
+}
+
+.card {
+  border: 1px solid var(--border);
+  flex-grow: 1;
+  padding: var(--gap);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr auto;
+  gap: var(--gap);
+}
+
+.grid-item {
+  grid-column: span 12;
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+}
+@media (min-width: 20rem) {
+  .grid-item {
+    grid-column: span var(--width, 1);
+  }
+}
+
+.tag {
+  font-size: 0.8em;
+  background-color: var(--accent);
+  color: var(--accent-bg);
+  border-radius: 0.5em;
+  white-space: nowrap;
+  padding: 0 0.3em;
 }
